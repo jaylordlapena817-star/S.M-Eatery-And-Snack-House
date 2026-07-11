@@ -7,9 +7,14 @@ body{
     padding:0;
     font-family:Arial, Helvetica, sans-serif;
     background:#f8f8f8;
+    color:#333;
+    line-height:1.6;
 }
 
-/* Hero Section */
+/* ==========================
+   HERO SECTION
+========================== */
+
 .hero{
     height:100vh;
     background:
@@ -40,7 +45,6 @@ body{
 .hero-content p{
     font-size:22px;
     margin-bottom:30px;
-    color:#f5f5f5;
 }
 
 .btn{
@@ -60,7 +64,142 @@ body{
     transform:translateY(-3px);
 }
 
+/* ==========================
+   FEATURED MENU
+========================== */
+
+.featured{
+    padding:80px 10%;
+    background:#fff;
+    text-align:center;
+}
+
+.featured h2{
+    color:#8B4513;
+    font-size:38px;
+}
+
+.subtitle{
+    color:#666;
+    margin-bottom:40px;
+}
+
+.food-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.food-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.food-card:hover{
+    transform:translateY(-10px);
+}
+
+.food-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.food-card h3{
+    color:#8B4513;
+    margin:20px 0 10px;
+}
+
+.food-card p{
+    color:#777;
+    margin-bottom:20px;
+}
+
+/* ==========================
+   ABOUT PREVIEW
+========================== */
+
+.about-preview{
+    padding:80px 10%;
+    text-align:center;
+    background:#fff8ef;
+}
+
+.about-preview h2{
+    color:#8B4513;
+    margin-bottom:20px;
+}
+
+.about-preview p{
+    max-width:800px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+/* ==========================
+   OPENING HOURS
+========================== */
+
+.hours{
+    padding:80px 10%;
+    background:#fff;
+    text-align:center;
+}
+
+.hours h2{
+    color:#8B4513;
+    margin-bottom:30px;
+}
+
+.hours-box{
+    max-width:500px;
+    margin:auto;
+    background:#ff9800;
+    color:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.hours-box p{
+    margin:15px 0 5px;
+    font-size:20px;
+}
+
+.hours-box span{
+    font-size:17px;
+}
+
+/* ==========================
+   CTA
+========================== */
+
+.cta{
+    padding:80px 10%;
+    text-align:center;
+    background:#8B4513;
+    color:#fff;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+/* ==========================
+   ANIMATION
+========================== */
+
 @keyframes fadeUp{
+
     from{
         opacity:0;
         transform:translateY(40px);
@@ -70,10 +209,14 @@ body{
         opacity:1;
         transform:translateY(0);
     }
+
 }
 
-/* Responsive */
-@media (max-width:768px){
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
 
     .hero-content h1{
         font-size:36px;
@@ -86,6 +229,17 @@ body{
     .btn{
         font-size:16px;
         padding:12px 28px;
+    }
+
+    .featured h2,
+    .about-preview h2,
+    .hours h2,
+    .cta h2{
+        font-size:30px;
+    }
+
+    .food-card img{
+        height:200px;
     }
 
 }
