@@ -1,85 +1,58 @@
 /* ==========================
-   GALLERY PAGE
+   LIGHTBOX
 ========================== */
 
-body{
-    margin:0;
-    padding:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f8f8f8;
-    color:#333;
+.lightbox{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:20px;
+    box-sizing:border-box;
 }
 
-/* Gallery Header */
+.lightbox.show{
+    display:flex;
+    animation:fadeIn .3s ease;
+}
 
-.gallery-header{
-    background:#8B4513;
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+    object-fit:contain;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+.lightbox .close{
+    position:absolute;
+    top:20px;
+    right:30px;
     color:#fff;
-    text-align:center;
-    padding:70px 20px;
-}
-
-.gallery-header h1{
     font-size:45px;
-    margin-bottom:10px;
-}
-
-.gallery-header p{
-    font-size:18px;
-}
-
-/* Gallery Grid */
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-    padding:60px 10%;
-}
-
-.gallery-item{
-    overflow:hidden;
-    border-radius:15px;
-    background:#fff;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    cursor:pointer;
     transition:.3s;
 }
 
-.gallery-item:hover{
-    transform:translateY(-8px);
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
+.lightbox .close:hover{
+    color:#ff9800;
+    transform:rotate(90deg);
 }
 
-.gallery-item img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    transition:.4s;
-    display:block;
-}
+@keyframes fadeIn{
 
-.gallery-item:hover img{
-    transform:scale(1.08);
-}
-
-/* Responsive */
-
-@media(max-width:768px){
-
-    .gallery-header h1{
-        font-size:34px;
+    from{
+        opacity:0;
     }
 
-    .gallery-header p{
-        font-size:16px;
-    }
-
-    .gallery-grid{
-        padding:40px 20px;
-    }
-
-    .gallery-item img{
-        height:220px;
+    to{
+        opacity:1;
     }
 
 }
