@@ -108,5 +108,75 @@ body{
     .mission-vision{
         padding:50px 20px;
     }
+/* ==========================
+   OWNER SECTION
+========================== */
 
+.owner{
+    padding:80px 20px;
+    text-align:center;
+    background:#fff;
+}
+
+.owner h2{
+    color:#8B4513;
+    font-size:36px;
+    margin-bottom:40px;
+}
+
+.owner-card{
+    max-width:450px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.owner-card:hover{
+    transform:translateY(-5px);
+}
+
+.owner-card img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #ff9800;
+    margin-bottom:20px;
+}
+
+.owner-card h3{
+    color:#8B4513;
+    margin-bottom:8px;
+}
+
+.owner-title{
+    color:#ff9800;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.owner-card p{
+    color:#555;
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+
+    .owner h2{
+        font-size:28px;
+    }
+
+    .owner-card{
+        padding:20px;
+    }
+
+    .owner-card img{
+        width:150px;
+        height:150px;
+    }
+
+}
 }
