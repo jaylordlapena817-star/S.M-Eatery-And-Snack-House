@@ -51,3 +51,19 @@ topButton.addEventListener("click", () => {
     });
 
 });
+
+// ==========================
+// ORDER VIA MESSENGER
+// ==========================
+
+function orderFood(food) {
+
+    const pageID = "61591766334503";
+
+    const message = encodeURIComponent(
+        `Hello! I would like to order ${food}.`
+    );
+
+    window.open(`https://m.me/${pageID}?text=${message}`, "_blank");
+
+}
