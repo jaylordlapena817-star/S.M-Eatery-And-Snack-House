@@ -1,0 +1,85 @@
+/* ==========================
+   GALLERY PAGE
+========================== */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8f8f8;
+    color:#333;
+}
+
+/* Gallery Header */
+
+.gallery-header{
+    background:#8B4513;
+    color:#fff;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.gallery-header h1{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.gallery-header p{
+    font-size:18px;
+}
+
+/* Gallery Grid */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:60px 10%;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:15px;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.gallery-item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.gallery-item img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:.4s;
+    display:block;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .gallery-header h1{
+        font-size:34px;
+    }
+
+    .gallery-header p{
+        font-size:16px;
+    }
+
+    .gallery-grid{
+        padding:40px 20px;
+    }
+
+    .gallery-item img{
+        height:220px;
+    }
+
+}
