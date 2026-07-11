@@ -274,5 +274,81 @@ body{
     background:#e68900;
     transform:translateY(-3px);
 }
+   /* ==========================
+   OWNER PREVIEW
+========================== */
+
+.owner-preview{
+    padding:80px 10%;
+    background:#ffffff;
+}
+
+.owner-preview h2{
+    text-align:center;
+    color:#8B4513;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.owner-box{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    max-width:1000px;
+    margin:auto;
+    background:#fff8ef;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.owner-box img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #ff9800;
+    flex-shrink:0;
+}
+
+.owner-info h3{
+    font-size:30px;
+    color:#8B4513;
+    margin-bottom:10px;
+}
+
+.owner-position{
+    color:#ff9800;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.owner-info p{
+    color:#555;
+    margin-bottom:20px;
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+
+    .owner-box{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .owner-box img{
+        width:170px;
+        height:170px;
+    }
+
+    .owner-preview h2{
+        font-size:30px;
+    }
+
+    .owner-info h3{
+        font-size:24px;
+    }
+
+}
 
 }
