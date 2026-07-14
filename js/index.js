@@ -177,3 +177,115 @@ async function countVisit(){
 
 
 countVisit();
+
+// ==========================
+// RANDOM BEST SELLER
+// ==========================
+
+const menuItems = [
+    {
+        name: "Papaitan",
+        price: "Starting at ₱60",
+        image: "image/foods/papaitan.jpeg"
+    },
+    {
+        name: "Dinakdakan",
+        price: "Starting at ₱60",
+        image: "image/foods/dinakdakan.jpeg"
+    },
+    {
+        name: "Dinuguan",
+        price: "Starting at ₱60",
+        image: "image/foods/dinuguan.jpeg"
+    },
+    {
+        name: "Gulay",
+        price: "Starting at ₱25",
+        image: "image/foods/pinakbet.jpg"
+    },
+    {
+        name: "Inihaw na Bangus",
+        price: "₱230 Medium Size",
+        image: "image/foods/inihaw_bangus.jpeg"
+    },
+    {
+        name: "Inihaw na Tilapia",
+        price: "₱100 - ₱150",
+        image: "image/foods/inihaw_tilapia.jpeg"
+    },
+    {
+        name: "Igado",
+        price: "Starting at ₱60",
+        image: "image/foods/igado.jpeg"
+    },
+    {
+        name: "Pork Adobo",
+        price: "Starting at ₱60",
+        image: "image/foods/porkadobo.jpg"
+    },
+    {
+        name: "Bopis",
+        price: "Starting at ₱60",
+        image: "image/foods/bopis.jpg"
+    },
+    {
+        name: "Mami",
+        price: "₱30 - ₱45",
+        image: "image/foods/mami.jpg"
+    },
+    {
+        name: "Ihaw",
+        price: "Available",
+        image: "image/foods/ihaw.jpeg"
+    },
+    {
+        name: "Halo-Halo",
+        price: "Available",
+        image: "image/foods/halohalo.jpeg"
+    }
+];
+
+const foodCard = document.getElementById("randomFood");
+
+if (foodCard) {
+
+    const img = document.getElementById("foodImg");
+    const title = document.getElementById("foodName");
+    const price = document.getElementById("foodPrice");
+
+    let lastIndex = -1;
+
+    function changeBestSeller() {
+
+        let index;
+
+        do {
+            index = Math.floor(Math.random() * menuItems.length);
+        } while (index === lastIndex);
+
+        lastIndex = index;
+
+        const item = menuItems[index];
+
+        foodCard.classList.remove("show");
+
+        setTimeout(() => {
+
+            img.src = item.image;
+            img.alt = item.name;
+            title.textContent = item.name;
+            price.textContent = item.price;
+
+            foodCard.onclick = () => orderFood(item.name);
+
+            foodCard.classList.add("show");
+
+        }, 300);
+
+    }
+
+    changeBestSeller();
+
+    setInterval(changeBestSeller, 2000);
+
+}
