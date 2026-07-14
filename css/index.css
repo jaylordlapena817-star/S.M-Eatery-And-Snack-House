@@ -351,4 +351,16 @@ body{
 
 }
 
+   #randomFood{
+    opacity:0;
+    transform:translateX(40px);
+    transition:.3s;
+    cursor:pointer;
+}
+
+#randomFood.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
 }
