@@ -74,5 +74,19 @@ footer{
     .footer-container{
         grid-template-columns:1fr;
     }
+/* ==========================
+   DEVELOPER CREDIT
+========================== */
 
+.developer-credit{
+    margin-top:8px;
+    font-size:14px;
+    color:#ddd;
+    opacity:.9;
+}
+
+.developer-credit strong{
+    color:#FFD54F;
+    font-weight:600;
+}
 }
