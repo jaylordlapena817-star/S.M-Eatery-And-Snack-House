@@ -179,7 +179,7 @@ async function countVisit(){
 countVisit();
 
 // ==========================
-// RANDOM BEST SELLER
+// BEST SELLER SLIDER
 // ==========================
 
 const menuItems = [
@@ -253,19 +253,11 @@ if (foodCard) {
     const title = document.getElementById("foodName");
     const price = document.getElementById("foodPrice");
 
-    let lastIndex = -1;
+    let currentIndex = 0;
 
     function changeBestSeller() {
 
-        let index;
-
-        do {
-            index = Math.floor(Math.random() * menuItems.length);
-        } while (index === lastIndex);
-
-        lastIndex = index;
-
-        const item = menuItems[index];
+        const item = menuItems[currentIndex];
 
         foodCard.classList.remove("show");
 
@@ -282,10 +274,14 @@ if (foodCard) {
 
         }, 300);
 
+        currentIndex++;
+
+        if (currentIndex >= menuItems.length) {
+            currentIndex = 0;
+        }
     }
 
     changeBestSeller();
 
     setInterval(changeBestSeller, 2000);
-
 }
