@@ -6,7 +6,13 @@ footer{
     background:#5D4037;
     color:#fff;
     padding:50px 10% 20px;
+    margin-top:40px;
     border-top:5px solid #FFD54F;
+
+    /* Rounded top corners */
+    border-radius:30px 30px 0 0;
+
+    overflow:hidden;
 }
 
 .footer-container{
@@ -65,16 +71,6 @@ footer{
     font-size:15px;
 }
 
-@media(max-width:768px){
-
-    footer{
-        padding:40px 20px 20px;
-        text-align:center;
-    }
-
-    .footer-container{
-        grid-template-columns:1fr;
-    }
 /* ==========================
    DEVELOPER CREDIT
 ========================== */
@@ -90,4 +86,20 @@ footer{
     color:#FFD54F;
     font-weight:600;
 }
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+    footer{
+        padding:40px 20px 20px;
+        text-align:center;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+    }
+
 }
