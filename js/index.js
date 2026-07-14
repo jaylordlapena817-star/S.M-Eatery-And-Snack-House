@@ -268,7 +268,9 @@ if (foodCard) {
             title.textContent = item.name;
             price.textContent = item.price;
 
-            foodCard.onclick = () => orderFood(item.name);
+            foodCard.onclick = () => {
+    window.location.href = "menu.html";
+};
 
             foodCard.classList.add("show");
 
